@@ -29,7 +29,7 @@ export default function Home() {
       </main>
 
       <footer className="text-center p-4 mt-auto py-3 bg-light">
-        <p className="mb-0">© 2024 Your Name. All Rights Reserved.</p>
+        <p className="mb-0">© 2025 Your DevNunes. Todos os direitos reservados.</p>
       </footer>
     </div>
   );

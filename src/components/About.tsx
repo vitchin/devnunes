@@ -5,15 +5,15 @@ const About = () => {
     <div className="container">
       <div className="row">
         <div className="col-lg-8 mx-auto text-center">
-          <h2 className="section-heading">About Me</h2>
+          <h2 className="section-heading">Sobre mim</h2>
           <hr className="my-4" />
           <p className="text-muted mb-4">
-            [A brief paragraph about yourself. Your background, your passion for coding, etc.]
+            Profissional empenhado e dedicado em desenvolver soluções que possam solucionar problemas reais.
           </p>
-          <h3>My Specializations</h3>
-          <p className="text-muted">[Your specializations, e.g., Frontend Development, Backend Development, Data Science, etc.]</p>
-          <h3>My Tech Stack</h3>
-          <p className="text-muted">[List of technologies you work with, e.g., React, Next.js, Node.js, Python, etc.]</p>
+          <h3>Minhas Especializações</h3>
+          <p className="text-muted">Sou técnico em desenvolvimento de Sistemas, graduado em Análise e Desenvolvimento de Sistemas, e recentemente finalizei a minha pós-graduação Ciência de Dados e Big Data Analytics.</p>
+          <h3>Minha Stack</h3>
+          <p className="text-muted">Laravel, Next.js, React.js, HTML, CSS, JavaScript, TypeScript, Python, PHP, MySQL, PostgreSQL, MongoDB, Firebase, Supabase</p>
         </div>
       </div>
     </div>

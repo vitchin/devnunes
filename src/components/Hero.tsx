@@ -26,9 +26,9 @@ const Hero = () => {
           />
         </div>
         <div className="col-md-8">
-          <h1>Hello, I'm [Your Name]</h1>
+          <h1>Olá, meu nome é Victor Ricardo</h1>
           <p className="lead">
-            [Your professional summary here. Briefly introduce yourself and your expertise.]
+            Sou um desenvolvedor web full-stack com mais de 2 anos de experiência.
           </p>
         </div>
       </div>
