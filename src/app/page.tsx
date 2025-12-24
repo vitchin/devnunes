@@ -7,29 +7,29 @@ import Contact from '../components/Contact';
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Navbar />
 
       <header id="home">
         <Hero />
       </header>
 
-      <main>
-        <section id="about" className="py-5">
+      <main className="flex-grow">
+        <section id="about" className="py-20">
           <About />
         </section>
 
-        <section id="projects" className="py-5 bg-light">
+        <section id="projects" className="py-20 bg-gray-100">
           <Projects />
         </section>
 
-        <section id="contact" className="py-5">
+        <section id="contact" className="py-20">
           <Contact />
         </section>
       </main>
 
-      <footer className="text-center p-4 mt-auto py-3 bg-light">
-        <p className="mb-0">© 2025 Your DevNunes. Todos os direitos reservados.</p>
+      <footer className="text-center p-4 bg-gray-100">
+        <p className="text-sm text-gray-600">© 2024 Your Name. All Rights Reserved.</p>
       </footer>
     </div>
   );

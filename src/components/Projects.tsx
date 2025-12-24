@@ -1,93 +1,88 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 
+const projects = [
+  {
+    type: 'Programming',
+    title: 'Programming Project 1',
+    description: 'A brief description of the programming project.',
+    image: '/project-placeholder.svg',
+  },
+  {
+    type: 'Data',
+    title: 'Data Project 1',
+    description: 'A brief description of the data project.',
+    image: '/project-placeholder.svg',
+  },
+  {
+    type: 'Programming',
+    title: 'Programming Project 2',
+    description: 'A brief description of the programming project.',
+    image: '/project-placeholder.svg',
+  },
+  {
+    type: 'Programming',
+    title: 'Programming Project 3',
+    description: 'Another programming project.',
+    image: '/project-placeholder.svg',
+  },
+];
+
 const Projects = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const projectsPerPage = 3;
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
+
+  const goToPrevious = () => {
+    const isFirstPage = currentIndex === 0;
+    const newIndex = isFirstPage ? totalPages - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToNext = () => {
+    const isLastPage = currentIndex === totalPages - 1;
+    const newIndex = isLastPage ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const startIndex = currentIndex * projectsPerPage;
+  const visibleProjects = projects.slice(startIndex, startIndex + projectsPerPage);
+
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-lg-12 text-center">
-          <h2 className="section-heading">Projects</h2>
-          <hr className="my-4" />
-        </div>
-      </div>
-      <div id="projectCarousel" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-          <div className="carousel-item active">
-            <div className="row">
-              <div className="col-md-4">
-                <div className="card">
-                  <Image
-                    src="/project-placeholder.svg"
-                    alt="Project Placeholder"
-                    width={350}
-                    height={250}
-                    className="card-img-top"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">Programming Project 1</h5>
-                    <p className="card-text">
-                      A brief description of the programming project.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="card">
-                  <Image
-                    src="/project-placeholder.svg"
-                    alt="Project Placeholder"
-                    width={350}
-                    height={250}
-                    className="card-img-top"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">Data Project 1</h5>
-                    <p className="card-text">
-                      A brief description of the data project.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-4">
-                <div className="card">
-                  <Image
-                    src="/project-placeholder.svg"
-                    alt="Project Placeholder"
-                    width={350}
-                    height={250}
-                    className="card-img-top"
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">Programming Project 2</h5>
-                    <p className="card-text">
-                      A brief description of the programming project.
-                    </p>
-                  </div>
-                </div>
+    <div className="container mx-auto px-4 text-center">
+      <h2 className="text-3xl font-bold mb-4">Projects</h2>
+      <hr className="w-16 h-1 mx-auto my-6 bg-gray-300 border-0 rounded" />
+      <div className="relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {visibleProjects.map((project, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={350}
+                height={250}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h5 className="text-xl font-bold mb-2">{project.title}</h5>
+                <p className="text-gray-700">{project.description}</p>
               </div>
             </div>
-          </div>
-          {/* Add more carousel-item for more projects */}
+          ))}
         </div>
         <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#projectCarousel"
-          data-bs-slide="prev"
+          onClick={goToPrevious}
+          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
         >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
+          &#10094;
         </button>
         <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#projectCarousel"
-          data-bs-slide="next"
+          onClick={goToNext}
+          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
         >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
+          &#10095;
         </button>
       </div>
     </div>
