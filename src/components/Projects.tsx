@@ -8,37 +8,37 @@ const projects = [
     type: 'Programming',
     title: 'PyClass',
     description: 'A brief description of the programming project.',
-    image: '/project-placeholder.svg',
+    image: './project-placeholder.svg',
   },
   {
     type: 'Programming',
     title: 'IEBI Membresia',
     description: 'A brief description of the programming project.',
-    image: '/project-placeholder.svg',
+    image: './project-placeholder.svg',
   },
   {
     type: 'Programming',
     title: 'Mikrotik-SDWAN',
     description: 'Another programming project.',
-    image: '/project-placeholder.svg',
+    image: './project-placeholder.svg',
   },
   {
     type: 'Programming',
     title: 'AskServiços',
     description: 'Another programming project.',
-    image: '/project-placeholder.svg',
+    image: './project-placeholder.svg',
   },
   {
     type: 'Programming',
     title: 'Gerador QRCode (FGH)',
     description: 'Another programming project.',
-    image: '/project-placeholder.svg',
+    image: './project-placeholder.svg',
   },
   {
     type: 'Programming',
     title: 'OdontoRAIZ',
     description: 'Another programming project.',
-    image: '/project-placeholder.svg',
+    image: './project-placeholder.svg',
   },
 ];
 

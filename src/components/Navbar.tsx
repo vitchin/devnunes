@@ -9,15 +9,14 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full bg-[#070c14] shadow-md z-10">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <Link href="#home" className="text-xl font-bold text-gray-50">DEV<span className="text-blue-200">NUNES</span></Link>
-          <div className="hidden md:flex space-x-6">
+        <div className="flex justify-center items-center py-4">
+          <div className="hidden md:flex space-x-6 w-full flex justify-center">
             <Link href="#home" className="text-gray-50 hover:text-blue-200">Início</Link>
             <Link href="#about" className="text-gray-50 hover:text-blue-200">Sobre</Link>
             <Link href="#projects" className="text-gray-50 hover:text-blue-200">Projetos</Link>
             <Link href="#contact" className="text-gray-50 hover:text-blue-200">Contato</Link>
           </div>
-          <div className="md:hidden">
+          <div className="md:hidden w-full flex justify-end">
             <button onClick={() => setIsOpen(!isOpen)}>
               <svg className="w-6 h-6" fill="#" stroke="#FFFFFF" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>

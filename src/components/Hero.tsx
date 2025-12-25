@@ -10,7 +10,7 @@ const Hero = () => {
       {/* Background Logo */}
       <div className="absolute inset-0 flex justify-center items-center z-0 opacity-20 pointer-events-none select-none">
         <Image
-          src="/DevNunes.png"
+          src="./DevNunes.png"
           alt="Logo Placeholder"
           width={1000}
           height={1000}
@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="flex-shrink-0 flex justify-center md:justify-end w-full md:w-auto">
           <div className="w-40 h-40 md:w-56 md:h-56 relative">
             <Image
-              src="/Victor Perfil.png"
+              src="./Victor Perfil.png"
               alt="Profile Placeholder"
               fill
               className="rounded-full object-cover"
