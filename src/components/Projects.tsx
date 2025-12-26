@@ -8,25 +8,29 @@ const projects = [
     type: 'Programming',
     title: 'PyClass',
     description: 'A brief description of the programming project.',
+    Languages: 'Some languages used in the project.',
     image: './project-placeholder.svg',
   },
   {
     type: 'Programming',
-    title: 'IEBI Membresia',
-    description: 'A brief description of the programming project.',
-    image: './project-placeholder.svg',
+    title: 'IEBIMembresia',
+    description: 'Sistema CRUD de controle de membros/congregados de uma igreja local.',
+    Languages: 'Next.js · Typescript · Firebase · TailwindCSS',
+    image: './Iebimembresia.png',
   },
   {
     type: 'Programming',
     title: 'AskServiços',
     description: 'Another programming project.',
+    Languages: 'Some languages used in the project.',
     image: './project-placeholder.svg',
   },
   {
     type: 'Programming',
-    title: 'Gerador QRCode (FGH)',
-    description: 'Another programming project.',
-    image: './project-placeholder.svg',
+    title: 'FGH QRCode',
+    description: 'Sistema de geração de QRCode feito para equipe de manutenção predial do Hospital Miguel Arraes.',
+    Languages: 'HTML · CSS · JavaScript · TailwindCSS',
+    image: './fghqrcode.png',
   },
 ];
 
@@ -81,7 +85,7 @@ const Projects = () => {
     };
 
   return (
-    <div className="container h-[400px] mx-auto px-4 text-center">
+    <div className="container h-fit mx-auto px-4 text-center">
       <h2 className="text-3xl font-bold mb-4">Projetos</h2>
       <hr className="w-16 h-1 mx-auto my-6 bg-gray-300 border-0 rounded" />
       <div className="relative">
@@ -96,24 +100,25 @@ const Projects = () => {
                 alt={project.title}
                 width={350}
                 height={250}
-                className="w-full h-48 object-cover"
+                className="w-full h-48 object-cover flex justify-center items-center"
               />
               <div className="p-6">
                 <h5 className="text-xl font-bold mb-2">{project.title}</h5>
                 <p className="text-gray-700">{project.description}</p>
+                <p className="text-sm text-gray-700 pt-2">{project.Languages}</p>
               </div>
             </div>
           ))}
         </div>
         <button
           onClick={goToPrevious}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+          className="absolute top-1/2 left-0 w-[40px] h-[40px] transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
         >
           &#10094;
         </button>
         <button
           onClick={goToNext}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
+          className="absolute top-1/2 right-0 w-[40px] h-[40px]transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
         >
           &#10095;
         </button>
