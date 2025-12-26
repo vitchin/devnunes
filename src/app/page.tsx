@@ -23,12 +23,12 @@ export default function Home() {
           <Projects />
         </section>
 
-        <section id="contact" className="py-20">
+        <section id="contact" className="py-20 bg-[#0b1423]">
           <Contact />
         </section>
       </main>
 
-      <footer className="text-center p-4 bg-[#0b1423]">
+      <footer className="text-center p-4 bg-[#070c14]">
         <p className="text-sm text-gray-300">© 2025 DevNunes. Todos os direitos reservados.</p>
       </footer>
     </div>
